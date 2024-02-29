@@ -46,7 +46,7 @@ describe("Test Login API responses", () => {
 	test("Validate login", async () => {
 		const req = {
 			email: "JohnDoe123@gmail.com",
-			password: "password123",
+			password: "password123!",
 		};
 
 		const res = await POST(req);
