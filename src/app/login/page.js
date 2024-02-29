@@ -1,10 +1,11 @@
+// src/app/login/page.js
 "use client";
 
 import { Alert } from "react-bootstrap";
 
 export default function Page() {
 	const handleLogin = async (e) => {
-		console.log("Something");
+		e.preventDefault();
 	};
 
 	return (
@@ -15,6 +16,8 @@ export default function Page() {
 			<form
 				onSubmit={handleLogin}
 				className="p-4 my-5 d-flex flex-column"
+				method="post"
+				id="form"
 			>
 				<label htmlFor="email-input">Email</label>
 				<input id="email-input" />
