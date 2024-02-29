@@ -1,10 +1,5 @@
-## Getting Started
+## Running test suites
 
-1. Execute `npm install` to install dependencies.
-2. Create a `.env.local` file. Use the `.env.local.example` as template.
-3. Run the development server
-```bash
-npx next dev
-```
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
+1. Clone this branch
+2. Execute command `npm install`
+3. Execute tests with the command `npm test`
