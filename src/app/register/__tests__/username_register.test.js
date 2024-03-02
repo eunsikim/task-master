@@ -1,5 +1,5 @@
-const emailAddress = require("../__tests__/username_check");
-const filledInField = require("../__tests__/username_check");
+const emailAddress = require("../username_register");
+const filledInField = require("../username_register");
 
 describe("checking email address is valid", () => {
   it("should contain a @", () => {
