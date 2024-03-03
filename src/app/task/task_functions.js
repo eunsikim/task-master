@@ -35,9 +35,9 @@ function editTaskName(originalTitle, editedTitle) {
 }
 
 //function for deleting the task
-function deleteTask(taskListArray) {
+function deleteTask(taskArray) {
   //code to remove task
-  return taskListArray;
+  return taskArray;
 }
 
 module.exports = taskLength;

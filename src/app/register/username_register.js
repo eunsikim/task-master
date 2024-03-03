@@ -13,7 +13,6 @@ function filledInField(fieldText) {
   } else {
     console.log("False: field box is empty");
   }
-
   return fieldText;
 }
 module.exports = meetsRequirements;

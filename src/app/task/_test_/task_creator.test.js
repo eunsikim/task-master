@@ -43,7 +43,7 @@ describe("task name is updated when edited", () => {
   });
   it("should return edited text if the text capitalization changes", () => {
     let original = edit("Go to the Store");
-    let result = edit("Go to the store");
+    let result = edit("go to the store");
     expect(edit(original, result)).toBeTruthy();
   });
   it("should return error message when edited text is left blank", () => {
@@ -55,8 +55,14 @@ describe("task name is updated when edited", () => {
 //test cases will deleted when prompted
 describe("detects when task is remove(deleted)", () => {
   it("should remove task", () => {
-    let original = remove("Go to the Store");
-    let result = remove(""); //new task name
-    expect(remove(original, result)).toBeTruthy();
+    const original = [];
+    original[0] = "Go to the mall";
+    original[1] = "Go to the store";
+    original[2] = "Go to the park";
+    original.remove([1]); //code would remove task; task indexs may need to shift down 1 if there is 2+ tasks
+    let result = [];
+    result[0] = "Go to the mall";
+    result[1] = "Go to the park";
+    expect(remove(original).toEqual(result));
   });
 });
