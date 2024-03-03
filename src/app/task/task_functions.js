@@ -12,11 +12,6 @@ function addToArray(taskArray) {
 function taskLength(title) {
   //code should be at least 1 character long, but not more than 255 characters long
   //if task name is empty or too long, return error
-  if (title.length >= 1 && title.length <= 255) {
-    console.log("True: there is text in the task box.");
-  } else {
-    console.log("False: task box is empty or too long.");
-  }
 
   return title;
 }
@@ -25,13 +20,6 @@ function taskLength(title) {
 function editTaskName(originalTitle, editedTitle) {
   //code to edit task name
   //if edited task name is blank, create an error message
-  if (editedTitle === "") {
-    console.log("Task is empty; please review task name");
-  } else if (originalTitle === editedTitle) {
-    return originalTitle;
-  } else if (originalTitle !== editedTitle) {
-    return editedTitle;
-  }
 }
 
 //function for deleting the task
@@ -39,7 +27,7 @@ function deleteTask(taskArray) {
   //code to remove task
   return taskArray;
 }
-
+module.exports = addToArray;
 module.exports = taskLength;
 module.exports = editTaskName;
 module.exports = deleteTask;

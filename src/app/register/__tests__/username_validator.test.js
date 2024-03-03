@@ -1,7 +1,7 @@
 // script to test that email address (username) meets all the requirements and is considered valid
 
-const emailAddress = require("../username_register");
-const filledInField = require("../username_register");
+const emailAddress = require("../username_validator");
+const filledInField = require("../username_validator");
 
 describe("checking email address is valid", () => {
   //valid email address with a @
@@ -12,6 +12,10 @@ describe("checking email address is valid", () => {
   it("should detect if no @ in email address", () => {
     let result = emailAddress("testgmail.com");
     expect(result).not.toContain("@");
+  });
+  it("should detect if multiple @ in email address", () => {
+    let result = emailAddress("test@@gmail.com");
+    expect(result).toBeFalsy();
   });
 
   it("should contain a period after the @", () => {

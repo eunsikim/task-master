@@ -18,14 +18,6 @@ Steps:
 
 4. Again in the terminal, type: `npm install --save-dev jest`. This should create or modify a “package-file.json” file.
 
-5. Click on the “package.json” file. Find the line that states:
-
-test: "echo \"Error: no test specified\" && exit 1"
-
-Adjust the code to the following:
-
-`test:"jest"`
-
 ## Running test suites
 
 1. Clone this branch: `git clone https://github.com/eunsikim/task-master.git`
