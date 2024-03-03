@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Setting Up Test Suite
 
-## Getting Started
+Our test suite requires the installation of Jest, as it will work will with React and overall is easy to use. Node.JS will also need to be installed. The instructions are written for Windows, and the Integrated Development Environment used is Visual Studio Code.
 
-First, run the development server:
+Steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Download Node.JS. Choose your installer based on your computer needs. Open the installer and follow the prompts:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1A. Part of the installation process will ask for you to confirm the terms and agreement, destination folder, and custom set-up. Adjust these as needed/ based on personal preferences.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1B. Next (on page 5 of instillation), you will be asked about “Tools for Native Modules.” This step will install the necessary tools for npm modules to be compiled from C/C++. Please check this box to download these additional tools.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1C. Click continue to complete installation process of Node.JS.
 
-## Learn More
+2. Once Node.JS. has been downloaded, open the main folder containing our project in your IDE.
 
-To learn more about Next.js, take a look at the following resources:
+3. Open the terminal in your IDE. Type: `npm init-y`. This should create or modify a “package.json” file.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Again in the terminal, type: `npm install --save-dev jest`. This should create or modify a “package-file.json” file.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Running test suites
 
-## Deploy on Vercel
+1. Clone this branch: `git clone https://github.com/eunsikim/task-master.git`
+2. Checkout testing branch: `git checkout 5-authentication-test-1`
+3. Execute command `npm install`
+4. Execute tests: `npm test`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## A brief description of the functionality the software should have after all code is implemented using the test cases in the next phase of the project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Our test cases cover 3 primary functions of our task management software, TaskMaster. The user should be able to create an account, using a username and password that meets the correct parameters (i.e username must be an email address with a @ and period included, and password meets minimum length). The second function is that the user should be able to successfully login if the username and password match with what is listed in the database. The third function is that users will be able to create, edit/ update, and delete a task on the main page.
