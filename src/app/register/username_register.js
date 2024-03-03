@@ -1,19 +1,14 @@
-function meetsRequirements(username) {
-  if (username.includes("@" && ".")) {
-    console.log("True: username contains a @ and a period");
-  } else {
-    console.log("False: username is missing requirements and a period");
-  }
-  return username;
+// function will check if user's input email address meets the following requirements
+// - contains a @ and a period in the email domain
+// - contains text after the period in the email domain (i.e .com, .edu, etc.,)
+// - errors will occur if there is the above conditions are not met, and/or if there are additional special characters, repeating periods or @
+function emailValidationChecker(emailAddress) {
+  return emailAddress;
 }
 
-function filledInField(fieldText) {
-  if (fieldText.length !== 0) {
-    console.log("True: there is text in the field box");
-  } else {
-    console.log("False: field box is empty");
-  }
-  return fieldText;
+//function will check that user input is not blank
+function filledInField(emailAddress) {
+  return emailAddress;
 }
-module.exports = meetsRequirements;
+module.exports = emailValidationChecker;
 module.exports = filledInField;

@@ -1,7 +1,16 @@
+const taskArray = require("../task_functions");
 const taskName = require("../task_functions");
 const edit = require("../task_functions");
 const remove = require("../task_functions");
 const maxLength = 255;
+
+describe("tasks are added to array", () => {
+  it("tasks should be added to the array", () => {
+    let resultArray = taskArray([]);
+    resultArray.push("Go the store");
+    expect(result).toContain("Go to the store");
+  });
+});
 
 //test cases that task does not exceed character limit and is not empty
 describe("does task meet character limits", () => {
