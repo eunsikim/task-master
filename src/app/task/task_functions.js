@@ -1,6 +1,6 @@
 //this script is for when the task is created, edited, or deleted
-
-const taskArray = [];
+//title refers to the name of the task
+let taskArray = [];
 
 //task will be added to taskArray
 function addToArray(taskArray) {
@@ -13,9 +13,9 @@ function taskLength(title) {
   //code should be at least 1 character long, but not more than 255 characters long
   //if task name is empty or too long, return error
   if (title.length >= 1 && title.length <= 255) {
-    console.log("True: there is text in the task box " + title);
+    console.log("True: there is text in the task box.");
   } else {
-    console.log("False: task box is empty or too long " + title.length);
+    console.log("False: task box is empty or too long.");
   }
 
   return title;
@@ -35,9 +35,9 @@ function editTaskName(originalTitle, editedTitle) {
 }
 
 //function for deleting the task
-function deleteTask(task, taskListArray) {
+function deleteTask(taskListArray) {
   //code to remove task
-  return task;
+  return taskListArray;
 }
 
 module.exports = taskLength;
