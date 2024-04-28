@@ -5,12 +5,12 @@ import { query } from "@/lib/mysql";
 export async function PUT(req) {
     const body = await req.json();
 
-    const { id, title } = body;
+    const { id, title, location = null, note = null, deadline = null } = body;
 
     try {
         const task = await query({
-            query: `UPDATE tasks SET title = ? WHER id = ?;`,
-            values: [title, id],
+            query: `UPDATE tasks SET title = ?, location = ?, note = ?, deadline = ? WHERE id = ?;`,
+            values: [title, location, note, deadline, id],
         });
 
         if (task.affectedRows === 0) {

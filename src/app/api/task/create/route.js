@@ -6,14 +6,14 @@ import { v4 } from "uuid";
 export async function POST(req) {
     const body = await req.json();
 
-    const { title } = body;
+    const { title, location = null, note = null, deadline = null } = body;
 
     const id = v4();
 
     try {
         const task = await query({
-            query: `INSERT INTO tasks(id, title) VALUES (?, ?);`,
-            values: [id, title],
+            query: `INSERT INTO tasks(id, title, location, note, deadline) VALUES (?, ?, ?, ?, ?);`,
+            values: [id, title, location, note, deadline],
         });
 
         let res = new NextResponse(

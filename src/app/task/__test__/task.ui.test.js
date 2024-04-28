@@ -29,7 +29,7 @@ describe("Task List", () => {
         const result = await screen.findByText("Go to the Store");
         expect(result).toBeInTheDocument();
     });
-    test("Add a date/ deadline to a task", async () => {
+    test("Add a date deadline to a task", async () => {
         const user = userEvent.setup();
 
         render(<Page />);
