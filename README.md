@@ -2,7 +2,7 @@
 
 ## Node.JS setup
 
-Our test suite requires Node.JS. The instructions are written for Windows.
+Our test suite requires Node.JS. The instructions are written for Windows, though should work well with MacOS.
 
 Steps:
 
@@ -14,10 +14,10 @@ Steps:
 
 ## Running test suites
 
-1. Clone this branch: `git clone https://github.com/eunsikim/task-master.git`
+1. Clone this branch: `git clone https://github.com/eunsikim/task-master.git`. Recommend running program in Visual Studios or Visual Studios Code.
 2. Checkout testing branch: `git checkout test`
-3. Execute command `npm install`
-4. Execute tests: `npm run test`
+3. Execute command `npm install` You will only need to do this once.
+4. Execute tests: `npm run test` Time to complete tasks will vary, but should take about 20 seconds to run 40 tests/ 6 test suites. All tests should pass.
 
 ## A brief description of the functionality after sprint / revised test suite
 
