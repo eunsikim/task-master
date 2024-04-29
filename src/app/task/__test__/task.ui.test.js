@@ -354,8 +354,8 @@ describe("Delete a Task from the List", () => {
     await user.type(taskInput, "Go the Store");
     await fireEvent.click(createButton);
 
-    const deleteButton = screen.getByText("Delete");
-    await fireEvent.click(deleteButton);
+    const deleteButton = screen.getByText("Delete"); 
+    await fireEvent.click(deleteButton);//task is deleted 
 
     expect(screen.queryByText("Go to the store")).not.toBeInTheDocument(); //task name should not be in document
   });
