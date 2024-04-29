@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Testing
 
-## Getting Started
+## Node.JS setup
 
-First, run the development server:
+Our test suite requires Node.JS. The instructions are written for Windows, though should work well with MacOS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Steps:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Download Node.JS. Choose your installer based on your computer needs. Open the installer and follow the prompts:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+    1.1 Part of the installation process will ask for you to confirm the terms and agreement, destination folder, and custom set-up. Adjust these as needed/ based on personal preferences.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    1.2 Next (on page 5 of instillation), you will be asked about “Tools for Native Modules.” This step will install the necessary tools for npm modules to be compiled from C/C++. Please check this box to download these additional tools.
 
-## Learn More
+## Running test suites
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone this branch: `git clone https://github.com/eunsikim/task-master.git`. Recommend running program in Visual Studios or Visual Studios Code.
+2. Checkout testing branch: `git checkout test`
+3. Execute command `npm install` You will only need to do this once.
+4. Execute tests: `npm run test` Time to complete tasks will vary, but should take about 20 seconds to run 40 tests/ 6 test suites. All tests should pass.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## A brief description of the functionality after sprint / revised test suite
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+In our final sprint, we added testing functions were the user can add a location, deadline, and note to any task (though it is optional). The user can also edit them as needed, and leave them blank; this is different from the task name which is a mandatory field.
 
-## Deploy on Vercel
+## A brief description from sprint 1
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Our test cases cover 3 primary functions of our task management software, TaskMaster. The tests assert the response from the API and the User Interface for each of these primary functions.The user should be able to create an account, using a username and password that meets the correct parameters (i.e username must be an email address with a @ and period included, and password meets minimum length). The second function is that the user should be able to successfully login if the username and password match with what is listed in the database. The third function is that users will be able to create, edit/ update, and delete a task on the main page.
